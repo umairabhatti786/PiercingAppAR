@@ -1,4 +1,4 @@
-package com.gametimecalender
+package com.piercingar
 
 import android.app.Application
 import com.facebook.react.PackageList

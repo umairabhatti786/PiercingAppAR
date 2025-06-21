@@ -24,7 +24,7 @@ const ScreenLayout: React.FC<BackgroundContainerProps> = ({
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: backgroundColor || theme.colors.background,
+        backgroundColor: backgroundColor || theme.colors.black,
       }}
     >
       <View style={[styles.container, style]}>{children}</View>

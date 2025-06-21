@@ -27,7 +27,7 @@ const CustomButton = ({
   const memoizedStyle = useMemo(() => {
     const baseStyle: ViewStyle = {
       width: width,
-      height: sizeHelper.calHp(height || 75),
+      height: sizeHelper.calHp(height || 80),
       backgroundColor: bgColor || theme.colors.primary,
       justifyContent: "center",
       alignItems: "center",
