@@ -12,6 +12,12 @@ import sizeHelper from '../../utils/Helpers';
 import {fonts} from '../../utils/Themes/fonts';
 import {useSelector} from 'react-redux';
 import {getToken} from '../../redux/reducers/authReducer';
+import icons from '../../utils/Constants/icons';
+import HomeScreen from '../../screens/Main/Home';
+import JewelryScreen from '../../screens/Main/Jewelry';
+import LibraryScreen from '../../screens/Main/Library';
+import SettingsScreen from '../../screens/Main/Settings';
+import ScanScreen from '../../screens/Main/Scan';
 
 const BottomTab = ({navigation}: any) => {
   const Bottom = createBottomTabNavigator();
@@ -20,30 +26,17 @@ const BottomTab = ({navigation}: any) => {
   const TabItem = ({focused, title, img}: any) => {
     return (
       <View style={[style.itemStyle]}>
-        <View
-          style={{
-            width: sizeHelper.calWp(7),
-            height: sizeHelper.calWp(7),
-            borderRadius: sizeHelper.calWp(7),
-            backgroundColor: focused ? theme.colors.primary : 'transparent',
-          }}
-        />
+       
 
         <Image
           resizeMode="contain"
           source={img}
           style={{
             ...style.img,
-            tintColor: focused ? theme.colors.primary : theme.colors.secondry,
+            tintColor: focused ? theme.colors.white : theme.colors.white+"50",
           }}
         />
-        <CustomText
-          text={title}
-          fontFam={fonts.Poppins_SemiBold}
-          fontWeight="600"
-          size={18}
-          color={focused ? theme.colors.primary : theme.colors.secondry}
-        />
+    
       </View>
     );
   };
@@ -73,7 +66,7 @@ const BottomTab = ({navigation}: any) => {
           };
         },
         tabBarStyle: {
-          backgroundColor: theme.colors.background,
+          backgroundColor: theme.colors.black,
           justifyContent: 'center',
           alignItems: 'center',
           shadowOffset: {width: 0, height: 5},
@@ -82,29 +75,96 @@ const BottomTab = ({navigation}: any) => {
           shadowRadius: 4,
           elevation: 10,
           height: sizeHelper.calHp(130),
-          borderTopWidth: -1,
-          paddingTop: sizeHelper.calHp(Platform.OS == 'ios' ? 20 : 30),
+          borderTopWidth: 0.2,
+          borderTopColor:theme.colors.red+"7",
+          paddingTop: sizeHelper.calHp(Platform.OS == 'ios' ? 20 : 20),
         },
 
         headerShown: false,
       })}>
       {/* Home Tab */}
-      {/* <Bottom.Screen
+      <Bottom.Screen
         name="Home"
         component={HomeScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (
               <TabItem
-                title={'Home'}
                 colors={theme.colors}
-                img={focused ? icons.filled_home : icons.filled_home}
+                img={icons.home}
                 focused={focused}
               />
             );
           },
         }}
-      /> */}
+      />
+
+
+<Bottom.Screen
+        name="Jewelry"
+        component={JewelryScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            return (
+              <TabItem
+                colors={theme.colors}
+                img={focused?icons?.jewelry_filled: icons.jewelry}
+                focused={focused}
+              />
+            );
+          },
+        }}
+      />
+
+
+<Bottom.Screen
+        name="Scan"
+        component={ScanScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            return (
+              <TabItem
+                colors={theme.colors}
+                img={icons.add}
+                focused={focused}
+              />
+            );
+          },
+        }}
+      />
+
+<Bottom.Screen
+        name="Libray"
+        component={LibraryScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            return (
+              <TabItem
+                colors={theme.colors}
+                img={focused?icons?.library_filled: icons.library}
+                focused={focused}
+              />
+            );
+          },
+        }}
+      />
+
+
+<Bottom.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{
+          tabBarIcon: ({focused}) => {
+            return (
+              <TabItem
+                colors={theme.colors}
+                img={focused?icons?.setting_filled: icons.setting}
+                focused={focused}
+              />
+            );
+          },
+        }}
+      />
       {/* Calendar Tab */}
       {/* <Bottom.Screen
         name="Favourites"

@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { theme } from "../../utils/Themes";
+import sizeHelper from "../../utils/Helpers";
 
 interface BackgroundContainerProps {
   children: React.ReactNode;
@@ -25,6 +26,8 @@ const ScreenLayout: React.FC<BackgroundContainerProps> = ({
       style={{
         flex: 1,
         backgroundColor: backgroundColor || theme.colors.black,
+        paddingHorizontal: sizeHelper.calWp(30),
+        paddingTop: sizeHelper.calHp(40),
       }}
     >
       <View style={[styles.container, style]}>{children}</View>

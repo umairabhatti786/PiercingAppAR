@@ -6,6 +6,14 @@ import Welcome from '../../screens/Auth/Welcome';
 import LoginScreen from '../../screens/Auth/Login';
 import CameraAccess from '../../screens/Auth/CameraAccess';
 import NotificationAccess from '../../screens/Auth/NotificationAccess';
+import AboutYouScreen from '../../screens/Auth/AboutYou';
+import AddPhotoScreen from '../../screens/Auth/AddPhoto';
+import YouDOBScreen from '../../screens/Auth/YouDOB';
+import SelectGenderScreen from '../../screens/Auth/SelectGender';
+import SelectPracticeScreen from '../../screens/Auth/SelectPractice';
+import SelectChallengesScreen from '../../screens/Auth/SelectChallenges';
+import PackagesScreen from '../../screens/Auth/Packages';
+import BottomTab from '../BottomTab';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 const AppStack = () => {
@@ -19,7 +27,18 @@ const AppStack = () => {
       <Stack.Screen name={'LoginScreen'} component={LoginScreen} /> 
       <Stack.Screen name={'CameraAccess'} component={CameraAccess} /> 
       <Stack.Screen name={'NotificationAccess'} component={NotificationAccess} /> 
+      <Stack.Screen name={'AboutYouScreen'} component={AboutYouScreen} /> 
+      <Stack.Screen name={'AddPhotoScreen'} component={AddPhotoScreen} /> 
+      <Stack.Screen name={'YouDOBScreen'} component={YouDOBScreen} /> 
+      <Stack.Screen name={'SelectGenderScreen'} component={SelectGenderScreen} /> 
+      <Stack.Screen name={'SelectPracticeScreen'} component={SelectPracticeScreen} /> 
+      <Stack.Screen name={'SelectChallengesScreen'} component={SelectChallengesScreen} /> 
+      <Stack.Screen name={'PackagesScreen'} component={PackagesScreen} /> 
+      <Stack.Screen name={'BottomTab'} component={BottomTab} /> 
 
+      
+      
+      
 
     </Stack.Navigator>
   );

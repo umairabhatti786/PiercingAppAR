@@ -2,7 +2,9 @@ export const theme={
 
     colors:{
         primary:"#157347",
-        highlght:"#06934533",
+        highlght:"#666666",
+        button_gray:"#181818",
+        yellow:"#F3C800",
         dark_highlight:"#069345",
         Input_field:"#F7F7F7",
         background:"#FFFFFF",
@@ -21,7 +23,6 @@ export const theme={
         text_black:"#404040",
         gray:"#EDECE7",
         text_gray:"#C1C1C1",
-        button_gray:"#F2F2F2",
         white:"#FFFFFF",
         red:"#FF0000",
         inProgress:"#FFC400",

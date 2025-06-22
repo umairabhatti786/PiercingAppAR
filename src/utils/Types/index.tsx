@@ -110,6 +110,14 @@ export type AppStackParamList = {
   WelcomeScreen:undefined
   CameraAccess:undefined
   NotificationAccess:undefined
+  AboutYouScreen:undefined
+  AddPhotoScreen:undefined
+  YouDOBScreen:undefined
+  SelectGenderScreen:undefined
+  SelectPracticeScreen:undefined
+  SelectChallengesScreen:undefined
+  PackagesScreen:undefined
+  
  
 };
 

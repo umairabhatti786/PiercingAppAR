@@ -15,12 +15,8 @@ import CustomText from "../Text";
 import { appStyles } from "../../utils/GlobalStyles";
 import { useNavigation } from "@react-navigation/native";
 
-const CustomHeader = ({
-  title,
-  textColor,
-  tintColor,
-  isNotification,
-  disableNext,
+const TabHeader = ({
+  title
 }: any) => {
   const navigation: any = useNavigation();
   return (
@@ -28,7 +24,6 @@ const CustomHeader = ({
       <View style={appStyles.rowjustify}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
-          style={{ padding: sizeHelper.calWp(20) }}
         >
           <Image
             style={{
@@ -40,26 +35,25 @@ const CustomHeader = ({
           />
         </TouchableOpacity>
 
+        <CustomText text={title} color={theme.colors.white} size={30} />
+
         <View>
-          {!disableNext && (
-            <TouchableOpacity
-              style={{ ...appStyles.row, gap: sizeHelper.calWp(20) }}
-            >
-              <CustomText text={"Later"} color={theme.colors.white} size={23} />
-              <Image style={styles.button_icon} source={icons.next_arrow} />
-            </TouchableOpacity>
-          )}
+          <TouchableOpacity
+        
+          >
+            <Image style={styles.button_icon} source={icons.notification} />
+          </TouchableOpacity>
         </View>
       </View>
     </>
   );
 };
-export default CustomHeader;
+export default TabHeader;
 
 const styles = StyleSheet.create({
   button_icon: {
-    width: sizeHelper.calWp(20),
-    height: sizeHelper.calWp(20),
+    width: sizeHelper.calWp(60),
+    height: sizeHelper.calWp(60),
     resizeMode: "contain",
   },
 });

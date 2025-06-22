@@ -1,64 +1,44 @@
-import {
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import images from "../../../utils/Constants/images";
+import { Image, StyleSheet, View } from "react-native";
 import { theme } from "../../../utils/Themes";
 import sizeHelper from "../../../utils/Helpers";
-import icons from "../../../utils/Constants/icons";
 import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
 import ScreenLayout from "../../../components/ScreenLayout";
-import { appStyles } from "../../../utils/GlobalStyles";
 import CustomHeader from "../../../components/Header/inde";
+import icons from "../../../utils/Constants/icons";
+import CustomInput from "../../../components/Input";
 
-const CameraAccess = ({ navigation }: any) => {
+const AboutYouScreen = ({ navigation }: any) => {
   return (
     <>
       <ScreenLayout>
         <View
-           style={{
-            
+          style={{
+            flex: 1,
             backgroundColor: theme.colors.black,
-            flex:1,
           }}
         >
           <View
             style={{
-              gap: sizeHelper.calHp(50),
+              gap: sizeHelper.calHp(30),
               flex: 1,
             }}
           >
-          <CustomHeader/>
+            <CustomHeader disableNext />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
-                text={"Let’s Use Your Camera"}
+                text={"About You"}
+                color={theme.colors.white}
+                size={22}
+              />
+              <CustomText
+                text={"What’s your name?"}
                 color={theme.colors.white}
                 size={30}
               />
-              <CustomText
-                text={
-                  "We need camera permission to scan body parts and capture accurate details."
-                }
-                color={theme.colors.white + "50"}
-                style={{ marginRight: sizeHelper.calWp(40) }}
-                size={22}
-
-              />
             </View>
 
-            <Image
-              style={{
-                width: "80%",
-                height: "70%",
-                alignSelf: "center",
-              }}
-              source={images.use_Camera_img}
-            />
+            <CustomInput placeholder="Please enter name here" />
           </View>
           <View
             style={{
@@ -70,22 +50,31 @@ const CameraAccess = ({ navigation }: any) => {
           >
             <CustomButton
               width={"100%"}
-              text="Continue"
-              onPress={()=>navigation.navigate("NotificationAccess")}
+              text="Keep Going"
+              onPress={()=>navigation.navigate("AddPhotoScreen")}
               textColor={theme.colors.black}
               bgColor={theme.colors.gray}
               borderRadius={999}
-            />
+            >
+              <Image
+                style={{
+                  width: sizeHelper.calWp(20),
+                  height: sizeHelper.calWp(20),
+                  resizeMode: "contain",
+                  tintColor: theme.colors.black,
+                }}
+                source={icons.next_arrow}
+              />
+            </CustomButton>
           </View>
         </View>
       </ScreenLayout>
     </>
   );
 };
-export default CameraAccess;
+export default AboutYouScreen;
 
 const styles = StyleSheet.create({
- 
   button_icon: {
     width: sizeHelper.calWp(20),
     height: sizeHelper.calWp(20),

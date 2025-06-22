@@ -9,11 +9,9 @@ import {
   import images from "../../../utils/Constants/images";
   import { theme } from "../../../utils/Themes";
   import sizeHelper from "../../../utils/Helpers";
-  import icons from "../../../utils/Constants/icons";
   import CustomButton from "../../../components/Button";
   import CustomText from "../../../components/Text";
   import ScreenLayout from "../../../components/ScreenLayout";
-  import { appStyles } from "../../../utils/GlobalStyles";
   import CustomHeader from "../../../components/Header/inde";
   
   const NotificationAccess = ({ navigation }: any) => {
@@ -22,11 +20,9 @@ import {
         <ScreenLayout>
           <View
             style={{
-              paddingHorizontal: sizeHelper.calWp(30),
-              paddingTop: sizeHelper.calHp(40),
-              gap: sizeHelper.calHp(50),
-              flex: 1,
+            
               backgroundColor: theme.colors.black,
+              flex:1,
             }}
           >
             <View
@@ -72,6 +68,7 @@ import {
               <CustomButton
                 width={"100%"}
                 text="Turn on notifications"
+                onPress={()=>navigation.navigate("AboutYouScreen")}
                 textColor={theme.colors.black}
                 bgColor={theme.colors.gray}
                 borderRadius={999}
