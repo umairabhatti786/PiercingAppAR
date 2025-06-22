@@ -31,7 +31,9 @@ import {
                 flex: 1,
               }}
             >
-            <CustomHeader/>
+            <CustomHeader
+            isDisableProgress
+            />
               <View style={{ gap: sizeHelper.calHp(10) }}>
                 <CustomText
                   text={"Receive inspiration"}

@@ -14,6 +14,7 @@ import icons from "../../utils/Constants/icons";
 import CustomText from "../Text";
 import { appStyles } from "../../utils/GlobalStyles";
 import { useNavigation } from "@react-navigation/native";
+import AnimatedProgressBar from "../AnimatedProgressBar";
 
 const CustomHeader = ({
   title,
@@ -21,6 +22,8 @@ const CustomHeader = ({
   tintColor,
   isNotification,
   disableNext,
+  step,
+  isDisableProgress,
 }: any) => {
   const navigation: any = useNavigation();
   return (
@@ -39,6 +42,15 @@ const CustomHeader = ({
             resizeMode="contain"
           />
         </TouchableOpacity>
+        {!isDisableProgress&&(
+             <AnimatedProgressBar
+             progress={step}
+             />
+
+        )
+
+        }
+     
 
         <View>
           {!disableNext && (

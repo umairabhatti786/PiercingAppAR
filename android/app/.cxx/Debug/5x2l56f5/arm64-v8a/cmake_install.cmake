@@ -45,7 +45,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/arm64-v8a/rnasyncstorage_autolinked_build/cmake_install.cmake")
-  include("/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/arm64-v8a/Compressor_autolinked_build/cmake_install.cmake")
   include("/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/arm64-v8a/RNDatePickerSpecs_autolinked_build/cmake_install.cmake")
   include("/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/arm64-v8a/rngesturehandler_codegen_autolinked_build/cmake_install.cmake")
   include("/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/arm64-v8a/RNPermissionsSpec_autolinked_build/cmake_install.cmake")

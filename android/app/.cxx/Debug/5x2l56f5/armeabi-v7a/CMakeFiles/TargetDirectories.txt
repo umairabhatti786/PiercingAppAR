@@ -4,9 +4,6 @@
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/rnasyncstorage_autolinked_build/CMakeFiles/edit_cache.dir
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/rnasyncstorage_autolinked_build/CMakeFiles/rebuild_cache.dir
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/Compressor_autolinked_build/CMakeFiles/react_codegen_Compressor.dir
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/Compressor_autolinked_build/CMakeFiles/edit_cache.dir
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/Compressor_autolinked_build/CMakeFiles/rebuild_cache.dir
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/RNDatePickerSpecs_autolinked_build/CMakeFiles/edit_cache.dir
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/RNDatePickerSpecs_autolinked_build/CMakeFiles/rebuild_cache.dir

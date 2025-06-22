@@ -28,7 +28,8 @@ const SelectPracticeScreen = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-            <CustomHeader disableNext />
+            <CustomHeader
+             step={200} />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
                 text={"Set Default Jewelry Sizes"}

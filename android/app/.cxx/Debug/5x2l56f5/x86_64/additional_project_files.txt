@@ -5,13 +5,6 @@
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/States.cpp.o
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/rnasyncstorageJSI-generated.cpp.o
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/rnasyncstorage-generated.cpp.o
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/Compressor_autolinked_build/CMakeFiles/react_codegen_Compressor.dir/Compressor-generated.cpp.o
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/Compressor_autolinked_build/CMakeFiles/react_codegen_Compressor.dir/react/renderer/components/Compressor/ComponentDescriptors.cpp.o
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/Compressor_autolinked_build/CMakeFiles/react_codegen_Compressor.dir/react/renderer/components/Compressor/CompressorJSI-generated.cpp.o
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/Compressor_autolinked_build/CMakeFiles/react_codegen_Compressor.dir/react/renderer/components/Compressor/EventEmitters.cpp.o
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/Compressor_autolinked_build/CMakeFiles/react_codegen_Compressor.dir/react/renderer/components/Compressor/Props.cpp.o
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/Compressor_autolinked_build/CMakeFiles/react_codegen_Compressor.dir/react/renderer/components/Compressor/ShadowNodes.cpp.o
-/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/Compressor_autolinked_build/CMakeFiles/react_codegen_Compressor.dir/react/renderer/components/Compressor/States.cpp.o
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/RNDatePickerSpecs-generated.cpp.o
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/ComponentDescriptors.cpp.o
 /Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/EventEmitters.cpp.o

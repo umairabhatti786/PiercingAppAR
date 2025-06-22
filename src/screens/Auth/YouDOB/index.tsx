@@ -24,7 +24,8 @@ const YouDOBScreen = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-            <CustomHeader disableNext />
+            <CustomHeader 
+                   step={105} />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
                 text={"About You"}

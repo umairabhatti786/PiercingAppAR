@@ -37,31 +37,6 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/CMakeFiles/cmake.verify_globs")
 endif()
 
-# react_codegen_SRCS at /Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/*.cpp")
-set(OLD_GLOB
-  "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/Compressor-generated.cpp"
-  )
-if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
-  message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/CMakeFiles/cmake.verify_globs")
-endif()
-
-# react_codegen_SRCS at /Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
-file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/react/renderer/components/Compressor/*.cpp")
-set(OLD_GLOB
-  "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/react/renderer/components/Compressor/ComponentDescriptors.cpp"
-  "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/react/renderer/components/Compressor/CompressorJSI-generated.cpp"
-  "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/react/renderer/components/Compressor/EventEmitters.cpp"
-  "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/react/renderer/components/Compressor/Props.cpp"
-  "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/react/renderer/components/Compressor/ShadowNodes.cpp"
-  "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-compressor/android/build/generated/source/codegen/jni/react/renderer/components/Compressor/States.cpp"
-  )
-if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
-  message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/mac/Documents/PiercingAppAR/android/app/.cxx/Debug/5x2l56f5/armeabi-v7a/CMakeFiles/cmake.verify_globs")
-endif()
-
 # react_codegen_SRCS at /Users/mac/Documents/PiercingAppAR/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/mac/Documents/PiercingAppAR/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB

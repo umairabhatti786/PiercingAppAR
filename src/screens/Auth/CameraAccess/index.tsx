@@ -33,7 +33,9 @@ const CameraAccess = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-          <CustomHeader/>
+          <CustomHeader
+          isDisableProgress
+          />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
                 text={"Let’s Use Your Camera"}

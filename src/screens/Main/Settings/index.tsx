@@ -29,63 +29,19 @@ import { usePermissions } from "../../../utils/Permissions";
 import ImagePicker from "react-native-image-crop-picker";
 import { openSettings } from "react-native-permissions";
 import InfoDetail from "../../../components/InfoDetail";
+import DaySelectorHeader from "../../../components/DaySelectorHeader";
 
 const SettingsScreen = ({ navigation }: any) => {
   const [jewelryTitle, setJewelryTitle] = useState("");
   const { hasGalleryPermission, requestGalleryPermission } = usePermissions();
   const [jewelryMedia, setJewelryMedia] = useState<any>();
 
-  const onAddMedia = async () => {
-    let gallerypermission = await requestGalleryPermission();
-    console.log("gallerypermission", gallerypermission);
-    if (gallerypermission == "granted" || gallerypermission == "limited") {
-      ImagePicker.openPicker({
-        width: 300,
-        height: 400,
-        mediaType: "photo",
-        forceJpg: true,
-      }).then(async (result) => {
-        if (result) {
-          const fileName = result?.path?.split("/").pop();
-          let data = {
-            ...result,
-            fileName: fileName,
-            name: fileName,
-            size: result?.size,
-            height: result?.height,
-            type: result?.mime,
-            uri: result?.path,
-            width: result?.width,
-          };
-          setJewelryMedia(data);
-        }
-      });
-    } else {
-      if (gallerypermission == "blocked") {
-        Alert.alert(
-          "Photo Access Needed",
-          "To upload photos, please allow access in Settings.",
-          [
-            { text: "Cancel", style: "cancel" },
-            {
-              text: "Open Settings",
-              onPress: () => {
-                if (Platform.OS == "ios") {
-                  openSettings();
-                } else {
-                  Linking.openSettings();
-                }
-              },
-            },
-          ]
-        );
-      }
-    }
-  };
+
   return (
     <>
       <TabLayout>
-        <TabHeader title={"Add New Jewelry"} />
+      <DaySelectorHeader/>
+
         <View style={{ flex: 1, gap: sizeHelper.calHp(50) }}>
           <InfoDetail isNextDisable title={"Settings"} />
           <InfoDetail 

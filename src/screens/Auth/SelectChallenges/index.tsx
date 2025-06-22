@@ -28,7 +28,7 @@ const SelectChallengesScreen = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-            <CustomHeader disableNext />
+            <CustomHeader  step={175}  />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
                 text={"Preferred Piercing Types"}

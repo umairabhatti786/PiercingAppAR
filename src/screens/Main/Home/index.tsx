@@ -15,6 +15,7 @@ import { theme } from "../../../utils/Themes";
 import icons from "../../../utils/Constants/icons";
 import { appStyles } from "../../../utils/GlobalStyles";
 import { WINDOW_WIDTH } from "@gorhom/bottom-sheet";
+import DaySelectorHeader from "../../../components/DaySelectorHeader";
 
 const HomeScreen = ({ navigation }: any) => {
   const LearningData = [
@@ -351,7 +352,8 @@ const HomeScreen = ({ navigation }: any) => {
             paddingHorizontal: sizeHelper.calWp(30),
           }}
         >
-          <TabHeader title={"Jewelry"} />
+          <DaySelectorHeader/>
+          {/* <TabHeader title={"Jewelry"} /> */}
           <Banner />
           <SavedJewelry />
         </View>
