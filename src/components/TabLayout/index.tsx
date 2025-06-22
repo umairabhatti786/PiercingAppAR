@@ -16,17 +16,21 @@ interface BackgroundContainerProps {
   children: React.ReactNode;
   style?: ViewStyle;
   backgroundColor?: any;
+  lauoutSource?: any;
+  paddingTop?: any;
 }
 
 const TabLayout: React.FC<BackgroundContainerProps> = ({
   children,
   style,
   backgroundColor,
+  lauoutSource,
+  paddingTop,
 }) => {
   return (
     <ImageBackground
       style={styles.layout_img}
-      source={images.main_background}
+      source={lauoutSource || images.main_background}
       resizeMode="cover"
     >
       <View
@@ -34,8 +38,9 @@ const TabLayout: React.FC<BackgroundContainerProps> = ({
           {
             ...styles.container,
             paddingHorizontal: sizeHelper.calWp(30),
-            gap:sizeHelper.calHp(50)
-
+            gap: sizeHelper.calHp(50),
+            paddingTop:
+              paddingTop || sizeHelper.calHp(Platform.OS == "ios" ? 100 : 40),
           },
           style,
         ]}
@@ -49,10 +54,9 @@ const TabLayout: React.FC<BackgroundContainerProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: sizeHelper.calHp(Platform.OS == "ios" ? 100 : 40),
   },
   layout_img: {
-    width: "100%",
+    width: "101%",
     height: "100%",
   },
 });

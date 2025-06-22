@@ -82,6 +82,7 @@ const SelectPracticeScreen = ({ navigation }: any) => {
            <CustomButton
               width={"100%"}
               text="Let’s Get Started"
+              justifyContent={"space-between"}
               onPress={()=>navigation.navigate("PackagesScreen")}
               textColor={theme.colors.black}
               bgColor={theme.colors.gray}

@@ -40,6 +40,7 @@ export type ButtonProps = {
   fontWeight?:string,
   colors?:any
   children?:any
+  justifyContent?:any
 
 };
 //  Custom input props
@@ -117,6 +118,10 @@ export type AppStackParamList = {
   SelectPracticeScreen:undefined
   SelectChallengesScreen:undefined
   PackagesScreen:undefined
+  ChatScreen:undefined
+  BottomTab:undefined
+  ScanScreen:undefined
+  AddJewelryScan:undefined
   
  
 };

@@ -14,6 +14,9 @@ import SelectPracticeScreen from '../../screens/Auth/SelectPractice';
 import SelectChallengesScreen from '../../screens/Auth/SelectChallenges';
 import PackagesScreen from '../../screens/Auth/Packages';
 import BottomTab from '../BottomTab';
+import ChatScreen from '../../screens/Main/Chat';
+import ScanScreen from '../../screens/Main/Scan';
+import AddJewelryScan from '../../screens/Main/AddJewelryScan';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 const AppStack = () => {
@@ -35,8 +38,10 @@ const AppStack = () => {
       <Stack.Screen name={'SelectChallengesScreen'} component={SelectChallengesScreen} /> 
       <Stack.Screen name={'PackagesScreen'} component={PackagesScreen} /> 
       <Stack.Screen name={'BottomTab'} component={BottomTab} /> 
+      <Stack.Screen name={'ChatScreen'} component={ChatScreen} /> 
+      <Stack.Screen name={'ScanScreen'} component={ScanScreen} /> 
+      <Stack.Screen name={'AddJewelryScan'} component={AddJewelryScan} /> 
 
-      
       
       
 

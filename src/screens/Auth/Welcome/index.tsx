@@ -37,6 +37,7 @@ const Welcome = ({ navigation }: any) => {
             }}
           >
             <TouchableOpacity
+            onPress={()=>navigation.navigate("BottomTab")}
               style={{ padding: sizeHelper.calWp(20), alignItems: "flex-end" }}
             >
               <Image
@@ -67,7 +68,8 @@ const Welcome = ({ navigation }: any) => {
             <CustomButton
               text="Create account"
               bgColor={"transparent"}
-              onPress={()=>navigation.navigate("CameraAccess")}
+                              onPress={()=>navigation.navigate("LoginScreen")}
+
               borderWidth={1}
               style={{ alignSelf: "center" }}
               borderColor={theme.colors.white}

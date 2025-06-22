@@ -5,6 +5,8 @@ export const theme={
         highlght:"#666666",
         button_gray:"#181818",
         yellow:"#F3C800",
+        red:"#B10000",
+
         dark_highlight:"#069345",
         Input_field:"#F7F7F7",
         background:"#FFFFFF",
@@ -24,7 +26,6 @@ export const theme={
         gray:"#EDECE7",
         text_gray:"#C1C1C1",
         white:"#FFFFFF",
-        red:"#FF0000",
         inProgress:"#FFC400",
         
     }

@@ -35,9 +35,10 @@ const LoginScreen = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-            <TouchableOpacity 
-            onPress={()=>navigation.goBack()}
-            style={{ padding: sizeHelper.calWp(20) }}>
+            <TouchableOpacity
+              onPress={() => navigation.goBack()}
+              style={{ padding: sizeHelper.calWp(20) }}
+            >
               <Image
                 style={{
                   width: sizeHelper.calWp(40),
@@ -64,7 +65,10 @@ const LoginScreen = ({ navigation }: any) => {
               alignItems: "center",
             }}
           >
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("CameraAccess")}
+              style={styles.button}
+            >
               <Image style={styles.button_icon} source={icons.apple} />
               <CustomText
                 text={"Create with Apple"}
@@ -74,7 +78,10 @@ const LoginScreen = ({ navigation }: any) => {
               <Image style={styles.button_icon} source={icons.next_arrow} />
             </TouchableOpacity>
 
-            <TouchableOpacity style={{...styles.button,borderWidth:-1}}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("CameraAccess")}
+              style={{ ...styles.button, borderWidth: -1 }}
+            >
               <Image style={styles.button_icon} source={icons.box} />
               <CustomText
                 text={"Create with Email"}

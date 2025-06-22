@@ -23,18 +23,19 @@ const CustomButton = ({
   paddingHorizontal,
   fontWeight,
   children,
+  justifyContent
 }: ButtonProps) => {
   const memoizedStyle = useMemo(() => {
     const baseStyle: ViewStyle = {
       width: width,
       height: sizeHelper.calHp(height || 80),
       backgroundColor: bgColor || theme.colors.primary,
-      justifyContent:children?"space-between":"center",
+      justifyContent:justifyContent||"center",
       alignItems: "center",
       borderRadius: sizeHelper.calHp(borderRadius || 18),
       borderWidth: borderWidth || 0,
       borderColor: borderColor,
-      paddingHorizontal:  sizeHelper.calWp(paddingHorizontal || 30),
+      paddingHorizontal: sizeHelper.calWp(paddingHorizontal || 30),
       flexDirection: "row",
       gap: sizeHelper.calWp(15),
       

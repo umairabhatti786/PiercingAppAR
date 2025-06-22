@@ -137,6 +137,7 @@ const PackagesScreen = ({ navigation }: any) => {
             <CustomButton
               width={"100%"}
               text="Start & Subscribe"
+              justifyContent={"space-between"}
               onPress={() => navigation.navigate("BottomTab")}
               textColor={theme.colors.black}
               bgColor={theme.colors.yellow}

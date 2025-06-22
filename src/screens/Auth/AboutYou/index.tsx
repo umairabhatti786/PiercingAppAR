@@ -51,6 +51,7 @@ const AboutYouScreen = ({ navigation }: any) => {
             <CustomButton
               width={"100%"}
               text="Keep Going"
+              justifyContent={"space-between"}
               onPress={()=>navigation.navigate("AddPhotoScreen")}
               textColor={theme.colors.black}
               bgColor={theme.colors.gray}

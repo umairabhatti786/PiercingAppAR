@@ -57,13 +57,12 @@ const CustomInput = ({
       }}>
       {label && (
         <View
-          style={{
-            marginBottom: sizeHelper.calHp(10),
-          }}>
+         >
           <CustomText
             text={label}
-            fontWeight="400"
-            fontFam={fonts.Inter_Light}
+            fontWeight="500"
+            size={30}
+            color={theme.colors.white+"40"}
           />
         </View>
       )}
@@ -73,10 +72,10 @@ const CustomInput = ({
           justifyContent: "space-between",
 
           paddingRight: sizeHelper.calWp(20),
-          height: sizeHelper.calHp(height || 80),
+          height: sizeHelper.calHp(height || 50),
           alignItems: "center",
           borderColor: borderColor|| theme.colors.highlght,
-          borderBottomWidth:1,
+          borderBottomWidth:0.5,
         }}
       >
         <TextInput
@@ -85,21 +84,21 @@ const CustomInput = ({
           onSubmitEditing={onSubmitEditing}
           allowFontScaling={false} // Disable font scaling
           style={{
-            fontSize: sizeHelper.calHp(23),
+            fontSize: sizeHelper.calHp(25),
             width: rightSource ? "89%" : "98%",
             alignItems: "center",
             height: "100%",
             justifyContent: "center",
             textAlign:textAlign,
-            textAlignVertical: textAlignVertical,
+            textAlignVertical: "top",
             paddingTop: paddingTop || 0,
             paddingVertical: 0, // Adjust as needed for centering
             fontFamily: fonts.Inter_Regular,
             fontWeight: fontWeight || "500",
-            color: color || theme.colors.black,
+            color: color || theme.colors.white,
             paddingRight: sizeHelper.calWp(rightSource ? 10 : 0),
           }}
-          placeholder={placeholder ||"Type here..."}
+          placeholder={placeholder}
           multiline={multiline}
           placeholderTextColor={
             placeholderTextColor || theme.colors.white+"40"
