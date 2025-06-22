@@ -29,14 +29,15 @@ const CustomButton = ({
       width: width,
       height: sizeHelper.calHp(height || 80),
       backgroundColor: bgColor || theme.colors.primary,
-      justifyContent: "center",
+      justifyContent:children?"space-between":"center",
       alignItems: "center",
       borderRadius: sizeHelper.calHp(borderRadius || 18),
       borderWidth: borderWidth || 0,
       borderColor: borderColor,
-      paddingHorizontal: paddingHorizontal,
+      paddingHorizontal:  sizeHelper.calWp(paddingHorizontal || 30),
       flexDirection: "row",
       gap: sizeHelper.calWp(15),
+      
     };
 
     return [baseStyle, style] as StyleProp<ViewStyle>;

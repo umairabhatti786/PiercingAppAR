@@ -72,14 +72,11 @@ const CustomInput = ({
           flexDirection: "row",
           justifyContent: "space-between",
 
-          paddingLeft: sizeHelper.calWp(20),
           paddingRight: sizeHelper.calWp(20),
           height: sizeHelper.calHp(height || 80),
           alignItems: "center",
           borderColor: borderColor|| theme.colors.highlght,
-          borderWidth: 1,
-          borderRadius: borderRadius || sizeHelper.calWp(15),
-          backgroundColor: backgroundColor || theme.colors.Input_field,
+          borderBottomWidth:1,
         }}
       >
         <TextInput
@@ -88,7 +85,7 @@ const CustomInput = ({
           onSubmitEditing={onSubmitEditing}
           allowFontScaling={false} // Disable font scaling
           style={{
-            fontSize: sizeHelper.calHp(21),
+            fontSize: sizeHelper.calHp(23),
             width: rightSource ? "89%" : "98%",
             alignItems: "center",
             height: "100%",
@@ -105,7 +102,7 @@ const CustomInput = ({
           placeholder={placeholder ||"Type here..."}
           multiline={multiline}
           placeholderTextColor={
-            placeholderTextColor || theme.colors.placeholder
+            placeholderTextColor || theme.colors.white+"40"
           }
           keyboardType={keyboard}
           maxLength={maxLength}
