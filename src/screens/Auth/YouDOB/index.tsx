@@ -24,8 +24,7 @@ const YouDOBScreen = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-            <CustomHeader 
-                   step={105} />
+            <CustomHeader step={105} />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
                 text={"About You"}
@@ -40,14 +39,12 @@ const YouDOBScreen = ({ navigation }: any) => {
             </View>
 
             <DatePicker
-              // modal={true}
               mode="date"
               locale="en_US"
               title={"Date of birth"}
               theme="dark"
               confirmText="Done"
               cancelText="Cancel"
-              // onCancel={() => setIsOpenPicker(false)} // Reset state on dismiss
               dividerColor={"#212325"}
               style={{
                 width: WINDOW_WIDTH, // Full width with padding
@@ -58,9 +55,7 @@ const YouDOBScreen = ({ navigation }: any) => {
               }}
               open={true}
               date={new Date()} // Ensure it always shows a valid date
-              // onConfirm={(date) => {
-              //   setIsOpenPicker(false);
-              // }}
+            
             />
           </View>
           <View
@@ -72,7 +67,7 @@ const YouDOBScreen = ({ navigation }: any) => {
             }}
           >
             <TouchableOpacity
-            onPress={()=>navigation.navigate("SelectGenderScreen")}
+              onPress={() => navigation.navigate("SelectGenderScreen")}
               style={{
                 ...styles.circle,
                 width: sizeHelper.calWp(100),
@@ -101,11 +96,6 @@ const YouDOBScreen = ({ navigation }: any) => {
 export default YouDOBScreen;
 
 const styles = StyleSheet.create({
-  button_icon: {
-    width: sizeHelper.calWp(20),
-    height: sizeHelper.calWp(20),
-    resizeMode: "contain",
-  },
   circle: {
     width: sizeHelper.calWp(330),
     height: sizeHelper.calWp(330),

@@ -1,6 +1,7 @@
 import {
   Image,
   ImageBackground,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -17,7 +18,7 @@ import SwitchToggle from "react-native-switch-toggle";
 import { useState } from "react";
 
 const PackagesScreen = ({ navigation }: any) => {
-    const [isEnableFreeTrail,setIsEnableFreeTrail]=useState(false)
+  const [isEnableFreeTrail, setIsEnableFreeTrail] = useState(false);
   return (
     <>
       <ImageBackground
@@ -28,7 +29,7 @@ const PackagesScreen = ({ navigation }: any) => {
         <View
           style={{
             paddingHorizontal: sizeHelper.calWp(30),
-            paddingTop: sizeHelper.calHp(40),
+            paddingTop: sizeHelper.calHp(Platform.OS == "android" ? 40 : 100),
             gap: sizeHelper.calHp(50),
             flex: 1,
           }}
@@ -52,57 +53,43 @@ const PackagesScreen = ({ navigation }: any) => {
             </TouchableOpacity>
 
             <View style={{ gap: sizeHelper.calHp(20), paddingTop: "40%" }}>
-              {/* <CustomText
-                text={"About You"}
-                color={theme.colors.white}
-                size={22}
-              /> */}
               <CustomText
                 text={"Upgrade\nto Premium"}
                 color={theme.colors.white}
                 size={60}
               />
-              <View style={{ flexDirection:"row", gap: sizeHelper.calWp(30) }}>
+              <View style={{ flexDirection: "row", gap: sizeHelper.calWp(30) }}>
                 <View style={styles.circle_check}>
                   <Image style={styles.check_icon} source={icons.check} />
                 </View>
                 <CustomText
-                text={"Unlimited access to\nexclusive styles"}
-                color={theme.colors.white}
-                size={27}
-              />
+                  text={"Unlimited access to\nexclusive styles"}
+                  color={theme.colors.white}
+                  size={27}
+                />
               </View>
-              <View style={{ flexDirection:"row", gap: sizeHelper.calWp(30) }}>
+              <View style={{ flexDirection: "row", gap: sizeHelper.calWp(30) }}>
                 <View style={styles.circle_check}>
                   <Image style={styles.check_icon} source={icons.check} />
                 </View>
                 <CustomText
-                text={"Unlimited Scan Storage"}
-                color={theme.colors.white}
-                size={27}
-              />
+                  text={"Unlimited Scan Storage"}
+                  color={theme.colors.white}
+                  size={27}
+                />
               </View>
 
-              <View style={{ flexDirection:"row", gap: sizeHelper.calWp(30) }}>
+              <View style={{ flexDirection: "row", gap: sizeHelper.calWp(30) }}>
                 <View style={styles.circle_check}>
                   <Image style={styles.check_icon} source={icons.check} />
                 </View>
                 <CustomText
-                text={"Team Access & Collaboration"}
-                color={theme.colors.white}
-                size={27}
-              />
+                  text={"Team Access & Collaboration"}
+                  color={theme.colors.white}
+                  size={27}
+                />
               </View>
             </View>
-
-            {/* <Image
-              style={{
-                width: sizeHelper.calWp(200),
-                height: sizeHelper.calWp(200),
-                alignSelf: "center",
-              }}
-              source={images.three}
-            /> */}
           </View>
           <View
             style={{
@@ -112,28 +99,33 @@ const PackagesScreen = ({ navigation }: any) => {
             }}
           >
             <View style={appStyles.rowjustify}>
-            <CustomText
+              <CustomText
                 text={"Not Sure? Enable Free Trail."}
                 color={theme.colors.white}
                 size={22}
               />
 
-<SwitchToggle
-              switchOn={isEnableFreeTrail}
-              onPress={()=>setIsEnableFreeTrail(!isEnableFreeTrail)}
-              circleColorOff="#ffff"
-              circleColorOn="#ffff"
-              backgroundColorOn={theme.colors.yellow}
-              backgroundColorOff="#484848"
-              containerStyle={{...styles.toggle_container,
-                padding:isEnableFreeTrail? 10:0,
-
-            }}
-              circleStyle={styles.toggle_circle}
-            />
-
+              <SwitchToggle
+                switchOn={isEnableFreeTrail}
+                onPress={() => setIsEnableFreeTrail(!isEnableFreeTrail)}
+                circleColorOff="#ffff"
+                circleColorOn="#ffff"
+                backgroundColorOn={theme.colors.yellow}
+                backgroundColorOff="#484848"
+                containerStyle={{
+                  ...styles.toggle_container,
+                  padding: isEnableFreeTrail ? 10 : 0,
+                }}
+                circleStyle={styles.toggle_circle}
+              />
             </View>
-            <View style={{width:"100%",height:sizeHelper.calHp(1),backgroundColor:theme.colors.white+"50"}}/>
+            <View
+              style={{
+                width: "100%",
+                height: sizeHelper.calHp(1),
+                backgroundColor: theme.colors.white + "50",
+              }}
+            />
             <CustomButton
               width={"100%"}
               text="Start & Subscribe"
@@ -154,11 +146,10 @@ const PackagesScreen = ({ navigation }: any) => {
               />
             </CustomButton>
             <CustomText
-                text={"Plan starts today, Just Rs 15,900 per year"}
-                color={theme.colors.white+"50"}
-                style={{textAlign:"center"}}
-                // size={27}
-              />
+              text={"Plan starts today, Just Rs 15,900 per year"}
+              color={theme.colors.white + "50"}
+              style={{ textAlign: "center" }}
+            />
           </View>
         </View>
       </ImageBackground>
@@ -171,11 +162,6 @@ const styles = StyleSheet.create({
   layout_img: {
     width: "100%",
     height: "100%",
-    // alignItems:"center",
-    // justifyContent:"center"
-    // position: "absolute",
-    // top: verticalScale(-100),
-    // opacity: 0.8,
   },
 
   circle_check: {

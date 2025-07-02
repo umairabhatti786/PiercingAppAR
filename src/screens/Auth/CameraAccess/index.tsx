@@ -1,19 +1,14 @@
 import {
   Image,
-  ImageBackground,
   StyleSheet,
-  Text,
-  TouchableOpacity,
   View,
 } from "react-native";
 import images from "../../../utils/Constants/images";
 import { theme } from "../../../utils/Themes";
 import sizeHelper from "../../../utils/Helpers";
-import icons from "../../../utils/Constants/icons";
 import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
 import ScreenLayout from "../../../components/ScreenLayout";
-import { appStyles } from "../../../utils/GlobalStyles";
 import CustomHeader from "../../../components/Header/inde";
 
 const CameraAccess = ({ navigation }: any) => {
@@ -21,10 +16,9 @@ const CameraAccess = ({ navigation }: any) => {
     <>
       <ScreenLayout>
         <View
-           style={{
-            
+          style={{
             backgroundColor: theme.colors.black,
-            flex:1,
+            flex: 1,
           }}
         >
           <View
@@ -33,9 +27,7 @@ const CameraAccess = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-          <CustomHeader
-          isDisableProgress
-          />
+            <CustomHeader isDisableProgress />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
                 text={"Let’s Use Your Camera"}
@@ -49,7 +41,6 @@ const CameraAccess = ({ navigation }: any) => {
                 color={theme.colors.white + "50"}
                 style={{ marginRight: sizeHelper.calWp(40) }}
                 size={22}
-
               />
             </View>
 
@@ -73,7 +64,7 @@ const CameraAccess = ({ navigation }: any) => {
             <CustomButton
               width={"100%"}
               text="Continue"
-              onPress={()=>navigation.navigate("NotificationAccess")}
+              onPress={() => navigation.navigate("NotificationAccess")}
               textColor={theme.colors.black}
               bgColor={theme.colors.gray}
               borderRadius={999}
@@ -87,10 +78,4 @@ const CameraAccess = ({ navigation }: any) => {
 export default CameraAccess;
 
 const styles = StyleSheet.create({
- 
-  button_icon: {
-    width: sizeHelper.calWp(20),
-    height: sizeHelper.calWp(20),
-    resizeMode: "contain",
-  },
 });

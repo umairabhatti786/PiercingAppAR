@@ -1,4 +1,4 @@
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/json-2.11.2/ext/json/ext/parser
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/json-2.11.2/ext/json/ext/parser
 /Users/mac/.rbenv/versions/2.7.0/bin/ruby -I /Users/mac/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20250425-83307-1tr418f.rb extconf.rb
 checking for rb_enc_interned_str() in ruby.h... no
 checking for rb_hash_new_capa() in ruby.h... no
@@ -7,10 +7,10 @@ checking for strnlen() in string.h... yes
 checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/json-2.11.2/ext/json/ext/parser
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/json-2.11.2/ext/json/ext/parser
 make "DESTDIR=" clean
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/json-2.11.2/ext/json/ext/parser
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/json-2.11.2/ext/json/ext/parser
 make "DESTDIR="
 compiling parser.c
 parser.c:345:1: warning: function 'raise_parse_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
@@ -22,6 +22,6 @@ parser.c:1093:1: warning: non-void function does not return a value in all contr
 2 warnings generated.
 linking shared-object json/ext/parser.bundle
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/json-2.11.2/ext/json/ext/parser
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/json-2.11.2/ext/json/ext/parser
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 parser.bundle ./.gem.20250425-83307-fmguk3/json/ext

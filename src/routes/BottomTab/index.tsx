@@ -14,9 +14,7 @@ import { useSelector } from "react-redux";
 import { getToken } from "../../redux/reducers/authReducer";
 import icons from "../../utils/Constants/icons";
 import HomeScreen from "../../screens/Main/Home";
-import JewelryScreen from "../../screens/Main/Jewelry";
 import LibraryScreen from "../../screens/Main/Library";
-import SettingsScreen from "../../screens/Main/Settings";
 import ScanScreen from "../../screens/Main/Scan";
 import JewelryStack from "../JewelryStack";
 import SettingStack from "../SettingStack";
@@ -137,7 +135,6 @@ const BottomTab = ({ navigation }: any) => {
                 <CustomText
                   text={"Scan"}
                   color={theme.colors.white + "50"}
-                  // size={22}
                 />
               </TouchableOpacity>
             );
@@ -176,122 +173,7 @@ const BottomTab = ({ navigation }: any) => {
           },
         }}
       />
-      {/* Calendar Tab */}
-      {/* <Bottom.Screen
-        name="Favourites"
-        component={token ? FavouritesScreen : LoginAndSignupScreen}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({focused}) => {
-            return (
-              <TabItem
-                colors={theme.colors}
-                title={'Favourites'}
-                img={
-                  focused ? icons.unfilled_favurits : icons.unfilled_favurits
-                }
-                focused={focused}
-              />
-            );
-          },
-        }}
-      /> */}
-      {/* AddEvent Tab */}
-
-      {/* <Bottom.Screen
-        name="Search"
-        component={SearchScreen}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({focused}) => {
-            return (
-              <TouchableOpacity
-                onPress={() => navigation.navigate('SearchScreen')}
-                style={{
-                  position: 'absolute',
-                  top: sizeHelper.calHp(Platform.OS == 'ios' ? -50 : -60),
-                  height: sizeHelper.calHp(110),
-                  width: sizeHelper.calHp(110),
-                  borderRadius: sizeHelper.calWp(110),
-                  backgroundColor: theme.colors.background,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('SearchScreen')}
-                  style={{
-                    height: sizeHelper.calHp(80),
-                    width: sizeHelper.calHp(80),
-                    borderRadius: sizeHelper.calWp(80),
-                    backgroundColor: theme.colors.primary,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}>
-                  <Image
-                    resizeMode="contain"
-                    source={icons.search}
-                    style={{
-                      height: sizeHelper.calHp(34),
-                      width: sizeHelper.calHp(34),
-                      tintColor: theme.colors.white,
-                    }}
-                  />
-                </TouchableOpacity>
-              </TouchableOpacity>
-            );
-          },
-        }}
-      /> */}
-      {/* Contacts Tab */}
-      {/* <Bottom.Screen
-        name="MyCart"
-        component={MyCartScreen}
-        options={{
-          ...(cartLength === 0
-            ? {
-                tabBarBadge: '', // shows a small red dot
-                tabBarBadgeStyle: {
-                  backgroundColor: 'transparent',
-                },
-              }
-            : {
-                tabBarBadge: cartLength,
-                tabBarBadgeStyle: {
-                  backgroundColor: theme.colors.primary,
-                  color: theme.colors.white,
-                  top: sizeHelper.calHp(-20),
-                },
-              }),
-          tabBarIcon: ({focused}) => {
-            return (
-              <TabItem
-                colors={theme.colors}
-                title={'My Cart'}
-                img={icons.unfilled_cart}
-                focused={focused}
-              />
-            );
-          },
-        }}
-      /> */}
-      {/* profile Tab */}
-      {/* <Bottom.Screen
-        name="Profile"
-        component={token ? ProfileScreen : LoginAndSignupScreen}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({focused}) => {
-            return (
-              <TabItem
-                colors={theme.colors}
-                title={'Profile'}
-                img={icons.unfilled_user}
-                focused={focused}
-              />
-            );
-          },
-        }}
-      /> */}
+     
     </Bottom.Navigator>
   );
 };

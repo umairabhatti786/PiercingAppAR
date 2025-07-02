@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { StatusBar } from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {AppStackParamList} from '../../utils/Types';
 import Welcome from '../../screens/Auth/Welcome';
@@ -25,7 +24,6 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      {/* <Stack.Screen name={'OnboardingScreen'} component={OnboardingScreen} />  */}
       <Stack.Screen name={'WelcomeScreen'} component={Welcome} /> 
       <Stack.Screen name={'LoginScreen'} component={LoginScreen} /> 
       <Stack.Screen name={'CameraAccess'} component={CameraAccess} /> 

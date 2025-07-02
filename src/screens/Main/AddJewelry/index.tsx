@@ -1,8 +1,6 @@
 import {
   Alert,
-  FlatList,
   Image,
-  ImageBackground,
   Linking,
   Platform,
   StyleSheet,
@@ -13,16 +11,13 @@ import {
 import sizeHelper from "../../../utils/Helpers";
 import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
-import ScreenLayout from "../../../components/ScreenLayout";
 import TabLayout from "../../../components/TabLayout";
 import TabHeader from "../../../components/TabHeader";
-import images from "../../../utils/Constants/images";
 import { theme } from "../../../utils/Themes";
 import LinearGradient from "react-native-linear-gradient";
 import { appStyles } from "../../../utils/GlobalStyles";
 import icons from "../../../utils/Constants/icons";
 import GradientButton from "../../../components/GradientButton";
-import CustomInput from "../../../components/Input";
 import { fonts } from "../../../utils/Themes/fonts";
 import { useState } from "react";
 import { usePermissions } from "../../../utils/Permissions";
@@ -32,21 +27,11 @@ import InfoDetail from "../../../components/InfoDetail";
 
 const AddJewelryScreen = ({ navigation }: any) => {
   const [jewelryTitle, setJewelryTitle] = useState("");
-  const { hasGalleryPermission, requestGalleryPermission } = usePermissions();
+  const { requestGalleryPermission } = usePermissions();
   const [jewelryMedia, setJewelryMedia] = useState<any>();
-
-  const JewelryData = [
-    { img: images.Jewelry_img1, name: "STRAIGHT BARBELL" },
-    { img: images.Jewelry_img2, name: "LABRET" },
-    { img: images.Jewelry_img3, name: "CURVED BARBELL" },
-    { img: images.Jewelry_img4, name: "CAPTIVE BEAD RING" },
-    { img: images.Jewelry_img5, name: "CIRCULAR BARBELL" },
-    { img: images.Jewelry_img6, name: "SEAM RING" },
-  ];
 
   const onAddMedia = async () => {
     let gallerypermission = await requestGalleryPermission();
-    console.log("gallerypermission", gallerypermission);
     if (gallerypermission == "granted" || gallerypermission == "limited") {
       ImagePicker.openPicker({
         width: 300,
@@ -124,9 +109,7 @@ const AddJewelryScreen = ({ navigation }: any) => {
             onChangeText={(txt) => setJewelryTitle(txt)}
           />
         </View>
-        <InfoDetail
-        placeholder={"Select Category"}
-        />
+        <InfoDetail placeholder={"Select Category"} />
 
         <View
           style={{
@@ -140,15 +123,12 @@ const AddJewelryScreen = ({ navigation }: any) => {
               size={27}
             />
             <TouchableOpacity
-              onPress={()=>{
-                if(jewelryMedia?.path){
-                    setJewelryMedia({})
+              onPress={() => {
+                if (jewelryMedia?.path) {
+                  setJewelryMedia({});
+                } else {
+                  onAddMedia();
                 }
-                else{
-                    onAddMedia()
-                }
-
-
               }}
               style={{
                 width: sizeHelper.calWp(75),
@@ -175,7 +155,7 @@ const AddJewelryScreen = ({ navigation }: any) => {
                     width: sizeHelper.calWp(20),
                     height: sizeHelper.calWp(20),
                   }}
-                  source={!jewelryMedia?.path?icons?.plus: icons.add_img}
+                  source={!jewelryMedia?.path ? icons?.plus : icons.add_img}
                   resizeMode="contain"
                 />
               </LinearGradient>
@@ -229,10 +209,4 @@ const AddJewelryScreen = ({ navigation }: any) => {
 };
 export default AddJewelryScreen;
 
-const styles = StyleSheet.create({
-  button_icon: {
-    width: sizeHelper.calWp(20),
-    height: sizeHelper.calWp(20),
-    resizeMode: "contain",
-  },
-});
+const styles = StyleSheet.create({});

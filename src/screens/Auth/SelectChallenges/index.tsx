@@ -12,7 +12,7 @@ import { useState } from "react";
 const SelectChallengesScreen = ({ navigation }: any) => {
   const [selectedGender, setSelectedGender] = useState("");
 
-  const gander = ["Ear", "Nose", "Eyebrow", "Navel", "Lip","Others"];
+  const gander = ["Ear", "Nose", "Eyebrow", "Navel", "Lip", "Others"];
   return (
     <>
       <ScreenLayout>
@@ -28,7 +28,7 @@ const SelectChallengesScreen = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-            <CustomHeader  step={175}  />
+            <CustomHeader step={175} />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
                 text={"Preferred Piercing Types"}
@@ -51,11 +51,10 @@ const SelectChallengesScreen = ({ navigation }: any) => {
               {gander.map((item, index) => {
                 return (
                   <CustomButton
-                  key={index.toString()}
+                    key={index.toString()}
                     text={item}
                     onPress={() => setSelectedGender(item)}
                     paddingHorizontal={60}
-
                     textColor={
                       selectedGender == item
                         ? theme.colors.black
@@ -81,7 +80,7 @@ const SelectChallengesScreen = ({ navigation }: any) => {
             }}
           >
             <TouchableOpacity
-            onPress={()=>navigation.navigate("SelectPracticeScreen")}
+              onPress={() => navigation.navigate("SelectPracticeScreen")}
               style={{
                 ...styles.circle,
                 width: sizeHelper.calWp(100),

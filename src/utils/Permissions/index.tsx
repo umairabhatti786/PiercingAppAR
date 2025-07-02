@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import { Platform, PermissionsAndroid, Linking } from "react-native";
 import { PERMISSIONS, request, check } from "react-native-permissions";
 
-
 const usePermissions = () => {
   const [hasGalleryPermission, setHasGalleryPermission] = useState(false);
   const requestGalleryPermission = async () => {
-    console.log("permissionStatus")
+    console.log("permissionStatus");
     try {
       let permissionStatus;
       if (Platform.OS === "ios") {
@@ -24,19 +23,17 @@ const usePermissions = () => {
         }
       }
 
-      console.log("permissionStatus",permissionStatus)
+      console.log("permissionStatus", permissionStatus);
 
-      return permissionStatus
+      return permissionStatus;
     } catch (error) {
       console.error("Error checking gallery permission:", error);
     }
   };
 
-
   return {
     hasGalleryPermission,
     requestGalleryPermission,
-  
   };
 };
 

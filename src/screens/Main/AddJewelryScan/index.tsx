@@ -6,9 +6,7 @@ import {
   View,
 } from "react-native";
 import sizeHelper from "../../../utils/Helpers";
-import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
-import ScreenLayout from "../../../components/ScreenLayout";
 import TabLayout from "../../../components/TabLayout";
 import images from "../../../utils/Constants/images";
 import { appStyles } from "../../../utils/GlobalStyles";
@@ -22,7 +20,7 @@ import { setIsScanned } from "../../../redux/reducers/authReducer";
 
 const AddJewelryScan = ({ navigation }: any) => {
   const [selectedJewelry, setSelectedJewelry] = useState<any>();
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
   const JewelryData = [
     { img: images.Jewelry_img1, id: 1 },
     { img: images.Jewelry_img2, id: 2 },
@@ -66,7 +64,6 @@ const AddJewelryScan = ({ navigation }: any) => {
             color={theme.colors.white}
             fontWeight="600"
             fontFam={fonts.Inter_Medium}
-            // size={23}
           />
         </View>
 
@@ -93,24 +90,21 @@ const AddJewelryScan = ({ navigation }: any) => {
             }}
           >
             <TouchableOpacity
-            onPress={()=>{
-                dispatch(setIsScanned(true))
-                navigation.goBack()
-
-            }}
-            >
-                  <Image
-              style={{
-                width: sizeHelper.calWp(20),
-                height: sizeHelper.calWp(20),
-                tintColor: theme.colors.white,
+              onPress={() => {
+                dispatch(setIsScanned(true));
+                navigation.goBack();
               }}
-              source={icons.cross}
-              resizeMode="contain"
-            />
-
+            >
+              <Image
+                style={{
+                  width: sizeHelper.calWp(20),
+                  height: sizeHelper.calWp(20),
+                  tintColor: theme.colors.white,
+                }}
+                source={icons.cross}
+                resizeMode="contain"
+              />
             </TouchableOpacity>
-          
           </LinearGradient>
         </TouchableOpacity>
       </View>
@@ -144,10 +138,7 @@ const AddJewelryScan = ({ navigation }: any) => {
 
         <CustomText text={"Add Jewelry"} color={theme.colors.white} size={25} />
 
-        <TouchableOpacity
-          //   onPress={() => navigation.navigate("ChatScreen")}
-          style={{ ...styles.box }}
-        >
+        <TouchableOpacity style={{ ...styles.box }}>
           <Image
             style={{
               height: "40%",
@@ -175,44 +166,9 @@ const AddJewelryScan = ({ navigation }: any) => {
           }}
         >
           <ChooseJewelry />
-          {/* <View
-            style={{
-              height: "70%",
-              width: "100%",
-              justifyContent: "space-between",
-            }}
-          >
-            <View style={appStyles.rowjustify}>
-              <Image
-                style={styles.rectangle_Img}
-                source={images.rect_top_left}
-                resizeMode="contain"
-              />
-
-              <Image
-                style={styles.rectangle_Img}
-                source={images.rect_top_right}
-                resizeMode="contain"
-              />
-            </View>
-            <View style={appStyles.rowjustify}>
-              <Image
-                style={styles.rectangle_Img}
-                source={images.rect_bottom_left}
-                resizeMode="contain"
-              />
-
-              <Image
-                style={styles.rectangle_Img}
-                source={images.rect_bottom_right}
-                resizeMode="contain"
-              />
-            </View>
-          </View> */}
 
           <View
             style={{
-              //   paddingBottom: sizeHelper.calHp(20),
               alignSelf: "flex-end",
               gap: sizeHelper.calHp(20),
               paddingRight: sizeHelper.calWp(50),
@@ -252,105 +208,7 @@ const AddJewelryScan = ({ navigation }: any) => {
             </TouchableOpacity>
           </View>
         </View>
-        {/* <View style={{...appStyles.rowjustify,paddingBottom:sizeHelper.calHp(30)}}>
-          <View style={{gap:sizeHelper.calHp(10),alignItems:"center"}}>
-             <TouchableOpacity
-            onPress={() => setIsScanningVisible(true)}
-            style={{ ...styles.box }}
-          >
-            <TouchableOpacity 
-                        onPress={() => setIsScanningVisible(true)}
 
-            style={styles.inner_box}>
-              <Image
-                style={{
-                  height: "40%",
-                  width: "40%",
-                }}
-                source={icons.scanner_gun}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-          </TouchableOpacity>
-           <CustomText
-          text={"SCAN"}
-          color={theme.colors.white+"60"}
-          size={19}
-        />
-
-          </View>
-          <View style={{gap:sizeHelper.calHp(10),alignItems:"center"}}>
-             <TouchableOpacity
-            onPress={() => navigation.navigate("ChatScreen")}
-            style={{ ...styles.box }}
-          >
-            <TouchableOpacity style={styles.inner_box}>
-              <Image
-                style={{
-                  height: "40%",
-                  width: "40%",
-                }}
-                source={icons.iPhone}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-          </TouchableOpacity>
-           <CustomText
-          text={"iPhone"}
-          color={theme.colors.white+"60"}
-          size={19}
-        />
-
-          </View>
-
-            <View style={{gap:sizeHelper.calHp(10),alignItems:"center"}}>
-             <TouchableOpacity
-            onPress={() => navigation.navigate("ChatScreen")}
-            style={{ ...styles.box }}
-          >
-            <TouchableOpacity style={styles.inner_box}>
-              <Image
-                style={{
-                  height: "40%",
-                  width: "40%",
-                }}
-                source={images.Jewelry_action}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-          </TouchableOpacity>
-           <CustomText
-          text={"CAPTURE"}
-          color={theme.colors.white+"60"}
-          size={19}
-        />
-
-          </View>
-
-          <View style={{gap:sizeHelper.calHp(10),alignItems:"center"}}>
-             <TouchableOpacity
-            onPress={() => navigation.navigate("ChatScreen")}
-            style={{ ...styles.box }}
-          >
-            <TouchableOpacity style={styles.inner_box}>
-              <Image
-                style={{
-                  height: "40%",
-                  width: "40%",
-                }}
-                source={icons.cube}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-          </TouchableOpacity>
-           <CustomText
-          text={"CAPTURE"}
-          color={theme.colors.white+"60"}
-          size={19}
-        />
-
-          </View>
-        </View> */}
         <View>
           <FlatList
             data={JewelryData}
@@ -394,11 +252,6 @@ const AddJewelryScan = ({ navigation }: any) => {
 export default AddJewelryScan;
 
 const styles = StyleSheet.create({
-  button_icon: {
-    width: sizeHelper.calWp(20),
-    height: sizeHelper.calWp(20),
-    resizeMode: "contain",
-  },
   box: {
     width: sizeHelper.calWp(120),
     height: sizeHelper.calWp(120),
@@ -408,17 +261,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: sizeHelper.calWp(120),
-  },
-  rectangle_Img: {
-    height: sizeHelper.calHp(110),
-    width: sizeHelper.calWp(110),
-  },
-  inner_box: {
-    height: "80%",
-    width: "80%",
-    borderRadius: 999,
-    backgroundColor: theme.colors.white,
-    alignItems: "center",
-    justifyContent: "center",
   },
 });

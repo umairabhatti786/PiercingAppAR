@@ -1,4 +1,4 @@
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/ffi-1.17.2/ext/ffi_c
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/ffi-1.17.2/ext/ffi_c
 /Users/mac/.rbenv/versions/2.7.0/bin/ruby -I /Users/mac/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20250425-83307-1d5rilg.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
@@ -9,10 +9,10 @@ checking for whether -pthread is accepted as LDFLAGS... yes
 creating extconf.h
 creating Makefile
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/ffi-1.17.2/ext/ffi_c
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/ffi-1.17.2/ext/ffi_c
 make "DESTDIR=" clean
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/ffi-1.17.2/ext/ffi_c
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/ffi-1.17.2/ext/ffi_c
 make "DESTDIR="
 compiling AbstractMemory.c
 AbstractMemory.c:1125:17: warning: '(' and '{' tokens introducing statement expression appear in different macro expansion contexts [-Wcompound-token-split-by-macro]
@@ -4129,6 +4129,6 @@ compiling ffi.c
 linking shared-object ffi_c.bundle
 ld: warning: ignoring duplicate libraries: '-lffi'
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/ffi-1.17.2/ext/ffi_c
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/ffi-1.17.2/ext/ffi_c
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20250425-83307-1fk6f07

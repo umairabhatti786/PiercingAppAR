@@ -1,8 +1,13 @@
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useState } from "react";
 import Modal from "react-native-modal";
 import CustomText from "../../../components/Text";
-import { WINDOW_WIDTH } from "@gorhom/bottom-sheet";
 import sizeHelper from "../../../utils/Helpers";
 import icons from "../../../utils/Constants/icons";
 import { fonts } from "../../../utils/Themes/fonts";
@@ -11,14 +16,7 @@ import { theme } from "../../../utils/Themes";
 import GradientButton from "../../../components/GradientButton";
 import CustomButton from "../../../components/Button";
 
-const ConnectScanModal = ({
-  modalVisible,
-  setModalVisible,
-  onCancel,
-  onDone,
-  title,
-  des,
-}: any) => {
+const ConnectScanModal = ({ modalVisible, setModalVisible }: any) => {
   const [isScanning, setisScanning] = useState(false);
   const [isScanned, setIsScanned] = useState(false);
 
@@ -112,28 +110,6 @@ const ConnectScanModal = ({
             />
           )}
         </View>
-        {/* <View style={{ ...appStyles.rowjustify, width: "100%" }}>
-          <CustomButton
-            height={68}
-            bgColor={theme.colors.white}
-            borderColor={theme.colors.warning}
-            borderWidth={1}
-            borderRadius={15}
-            textColor={theme.colors.warning}
-            width={"48%"}
-            text={"Cancel"}
-            onPress={onCancel}
-          />
-          <CustomButton
-            width={"48%"}
-            height={68}
-            borderRadius={15}
-            bgColor={theme.colors.primary}
-            textColor={theme.colors.white}
-            text={"Done"}
-            onPress={onDone}
-          />
-        </View> */}
       </View>
     </Modal>
   );
@@ -146,7 +122,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: sizeHelper.calWp(40),
     borderTopRightRadius: sizeHelper.calWp(40),
     paddingHorizontal: sizeHelper.calWp(30),
-    paddingVertical: sizeHelper.calHp(20),
+    paddingVertical: sizeHelper.calHp(Platform.OS == "ios" ? 50 : 20),
     gap: sizeHelper.calHp(20),
   },
 });

@@ -9,29 +9,15 @@ import sizeHelper from "../../../utils/Helpers";
 import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
 import TabLayout from "../../../components/TabLayout";
-import TabHeader from "../../../components/TabHeader";
 import images from "../../../utils/Constants/images";
 import { theme } from "../../../utils/Themes";
 import icons from "../../../utils/Constants/icons";
 import { appStyles } from "../../../utils/GlobalStyles";
 import { WINDOW_WIDTH } from "@gorhom/bottom-sheet";
 import DaySelectorHeader from "../../../components/DaySelectorHeader";
+import { LearningData } from "../../../utils/Data";
 
 const HomeScreen = ({ navigation }: any) => {
-  const LearningData = [
-    {
-      img: images.learning_img1,
-      title: "How to Scan",
-      name: "Michael Jones",
-      time: "2 mins",
-    },
-    {
-      img: images.learning_img2,
-      title: "Food",
-      name: "Elizabeth Jones",
-      time: "16 mins",
-    },
-  ];
   const Banner = () => {
     return (
       <View
@@ -60,8 +46,6 @@ const HomeScreen = ({ navigation }: any) => {
             justifyContent: "flex-end",
             zIndex: 1,
             gap: sizeHelper.calHp(20),
-            // alignItems:"flex-end",
-            // backgroundColor:"red"
           }}
         >
           <CustomText
@@ -91,39 +75,6 @@ const HomeScreen = ({ navigation }: any) => {
               source={icons.next_arrow}
             />
           </CustomButton>
-          {/* <TouchableOpacity
-            style={{
-              width: sizeHelper.calWp(70),
-              height: sizeHelper.calWp(70),
-              alignSelf: "flex-end",
-              backgroundColor: "#DEEAF550",
-              borderWidth: 1,
-              borderColor: theme.colors.white + "30",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: sizeHelper.calWp(80),
-            }}
-          >
-            <View
-              style={{
-                width: "80%",
-                height: "80%",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: theme.colors.white,
-                borderRadius: 999,
-              }}
-            >
-              <Image
-                style={{
-                  height: "80%",
-                  width: "80%",
-                }}
-                source={images.Jewelry_action}
-                // resizeMode="contain"
-              />
-            </View>
-          </TouchableOpacity> */}
         </View>
 
         <Image
@@ -133,7 +84,6 @@ const HomeScreen = ({ navigation }: any) => {
             position: "absolute",
           }}
           source={images.banner}
-          // resizeMode="contain"
         />
       </View>
     );
@@ -167,8 +117,6 @@ const HomeScreen = ({ navigation }: any) => {
             justifyContent: "flex-end",
             zIndex: 1,
             gap: sizeHelper.calHp(20),
-            // alignItems:"flex-end",
-            // backgroundColor:"red"
           }}
         >
           <CustomText
@@ -198,39 +146,6 @@ const HomeScreen = ({ navigation }: any) => {
               source={icons.next_arrow}
             />
           </CustomButton>
-          {/* <TouchableOpacity
-            style={{
-              width: sizeHelper.calWp(70),
-              height: sizeHelper.calWp(70),
-              alignSelf: "flex-end",
-              backgroundColor: "#DEEAF550",
-              borderWidth: 1,
-              borderColor: theme.colors.white + "30",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: sizeHelper.calWp(80),
-            }}
-          >
-            <View
-              style={{
-                width: "80%",
-                height: "80%",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: theme.colors.white,
-                borderRadius: 999,
-              }}
-            >
-              <Image
-                style={{
-                  height: "80%",
-                  width: "80%",
-                }}
-                source={images.Jewelry_action}
-                // resizeMode="contain"
-              />
-            </View>
-          </TouchableOpacity> */}
         </View>
         <View
           style={{
@@ -248,7 +163,6 @@ const HomeScreen = ({ navigation }: any) => {
               width: "33%",
             }}
             source={images.Jewelry_img1}
-            // resizeMode="contain"
           />
           <Image
             style={{
@@ -256,7 +170,6 @@ const HomeScreen = ({ navigation }: any) => {
               width: "33%",
             }}
             source={images.Jewelry_img2}
-            // resizeMode="contain"
           />
           <Image
             style={{
@@ -264,13 +177,12 @@ const HomeScreen = ({ navigation }: any) => {
               width: "33%",
             }}
             source={images.Jewelry_img3}
-            // resizeMode="contain"
           />
         </View>
       </View>
     );
   };
-  const LearningCard = ({ item, index }:any) => {
+  const LearningCard = ({ item, index }: any) => {
     return (
       <View
         style={{
@@ -308,8 +220,6 @@ const HomeScreen = ({ navigation }: any) => {
               alignItems: "center",
               justifyContent: "center",
               zIndex: 1,
-              // alignItems:"flex-end",
-              // backgroundColor:"red"
             }}
           >
             <Image
@@ -329,7 +239,6 @@ const HomeScreen = ({ navigation }: any) => {
               borderRadius: sizeHelper.calWp(20),
             }}
             source={item?.img}
-            // resizeMode="contain"
           />
         </View>
         <View style={{ gap: sizeHelper.calHp(10) }}>
@@ -352,8 +261,7 @@ const HomeScreen = ({ navigation }: any) => {
             paddingHorizontal: sizeHelper.calWp(30),
           }}
         >
-          <DaySelectorHeader/>
-          {/* <TabHeader title={"Jewelry"} /> */}
+          <DaySelectorHeader />
           <Banner />
           <SavedJewelry />
         </View>
@@ -367,13 +275,11 @@ const HomeScreen = ({ navigation }: any) => {
           >
             <CustomText
               text={"LEARNINGS"}
-              // style={{ marginRight: sizeHelper.calWp(50) }}
               color={theme.colors.white}
               size={27}
             />
             <CustomText
               text={"See more"}
-              // style={{ marginRight: sizeHelper.calWp(50) }}
               textDecorationLine="underline"
               color={theme.colors.white}
               size={23}
@@ -388,7 +294,6 @@ const HomeScreen = ({ navigation }: any) => {
             contentContainerStyle={{
               gap: sizeHelper.calHp(20),
               paddingRight: sizeHelper.calWp(50),
-              // paddingBottom: sizeHelper.calHp(100),
             }}
             renderItem={({ item, index }) => {
               return <LearningCard item={item} />;
@@ -397,21 +302,8 @@ const HomeScreen = ({ navigation }: any) => {
         </View>
 
         <TouchableOpacity
-        onPress={()=>navigation.navigate("ChatScreen")}
-          style={{
-            width: sizeHelper.calWp(120),
-            height: sizeHelper.calWp(120),
-            alignSelf: "flex-end",
-            backgroundColor: "#DEEAF550",
-            borderWidth: 1.5,
-            borderColor: theme.colors.white + "30",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: sizeHelper.calWp(80),
-            position: "absolute",
-            bottom: sizeHelper.calHp(50),
-            right: sizeHelper.calWp(30),
-          }}
+          onPress={() => navigation.navigate("ChatScreen")}
+          style={styles.chatContainer}
         >
           <Image
             style={{
@@ -422,109 +314,6 @@ const HomeScreen = ({ navigation }: any) => {
             resizeMode="contain"
           />
         </TouchableOpacity>
-
-        {/* <View>
-          <FlatList
-            data={JewelryData}
-            showsVerticalScrollIndicator={false}
-            numColumns={2}
-            columnWrapperStyle={{ justifyContent: "space-between" }}
-            contentContainerStyle={{
-              gap: sizeHelper.calHp(20),
-              // paddingBottom: sizeHelper.calHp(100),
-            }}
-            renderItem={({ item, index }) => {
-              return (
-                <View
-                  style={{
-                    width: "49%",
-                    height: sizeHelper.calHp(240),
-                    borderRadius: sizeHelper.calWp(10),
-                    overflow: "hidden",
-                  }}
-                >
-                  <View
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      position: "absolute",
-                      backgroundColor: theme.colors.black,
-                      opacity: 0.4,
-                      zIndex: 1,
-                    }}
-                    // resizeMode="contain"
-                  />
-                  <View
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      padding: sizeHelper.calWp(15),
-                      justifyContent: "space-between",
-                      zIndex: 1,
-                    }}
-                  >
-                    <CustomText
-                      text={item?.name}
-                      style={{ marginRight: sizeHelper.calWp(50) }}
-                      color={theme.colors.white}
-                      size={27}
-                    />
-                    <TouchableOpacity
-                      style={{
-                        width: sizeHelper.calWp(70),
-                        height: sizeHelper.calWp(70),
-                        alignSelf: "flex-end",
-                        backgroundColor: "#DEEAF550",
-                        borderWidth: 1,
-                        borderColor: theme.colors.white + "30",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        borderRadius: sizeHelper.calWp(80),
-                      }}
-                    >
-                      <View
-                        style={{
-                          width: "80%",
-                          height: "80%",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          backgroundColor: theme.colors.white,
-                          borderRadius: 999,
-                        }}
-                      >
-                        <Image
-                          style={{
-                            height: "80%",
-                            width: "80%",
-                          }}
-                          source={images.Jewelry_action}
-                          // resizeMode="contain"
-                        />
-                      </View>
-                    </TouchableOpacity>
-                  </View>
-
-                  <Image
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      position: "absolute",
-                    }}
-                    source={item?.img}
-                    // resizeMode="contain"
-                  />
-                </View>
-              );
-            }}
-          />
-        </View> */}
-        {/* <View style={{ flexDirection: "row", alignSelf: "center" }}>
-          <GradientButton
-            width={"45%"}
-            onPress={() => navigation.navigate("AddJewelryScreen")}
-            text={"+  Add Jewelry"}
-          />
-        </View> */}
       </TabLayout>
     </>
   );
@@ -532,9 +321,18 @@ const HomeScreen = ({ navigation }: any) => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  button_icon: {
-    width: sizeHelper.calWp(20),
-    height: sizeHelper.calWp(20),
-    resizeMode: "contain",
+  chatContainer: {
+    width: sizeHelper.calWp(120),
+    height: sizeHelper.calWp(120),
+    alignSelf: "flex-end",
+    backgroundColor: "#DEEAF550",
+    borderWidth: 1.5,
+    borderColor: theme.colors.white + "30",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: sizeHelper.calWp(80),
+    position: "absolute",
+    bottom: sizeHelper.calHp(50),
+    right: sizeHelper.calWp(30),
   },
 });

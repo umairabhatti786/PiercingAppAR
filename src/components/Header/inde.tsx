@@ -31,7 +31,7 @@ const CustomHeader = ({
       <View style={appStyles.rowjustify}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
-          style={{ padding: sizeHelper.calWp(20) }}
+          style={{ paddingVertical: sizeHelper.calHp(20),paddingRight:sizeHelper.calWp(20),alignItems:"flex-start" }}
         >
           <Image
             style={{

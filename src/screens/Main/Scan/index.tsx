@@ -6,9 +6,7 @@ import {
   View,
 } from "react-native";
 import sizeHelper from "../../../utils/Helpers";
-import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
-import ScreenLayout from "../../../components/ScreenLayout";
 import TabLayout from "../../../components/TabLayout";
 import images from "../../../utils/Constants/images";
 import { appStyles } from "../../../utils/GlobalStyles";
@@ -44,12 +42,9 @@ const ScanScreen = ({ navigation }: any) => {
           text={"Scanning..."}
           color={theme.colors.white}
           size={25}
-
-          // size={27}
         />
 
         <TouchableOpacity
-          // onPress={() => navigation.navigate("ChatScreen")}
           style={{ ...styles.box }}
         >
           <Image

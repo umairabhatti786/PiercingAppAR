@@ -32,16 +32,9 @@
 		<true/>
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Dorian requires photo library access to upload and share photos.</string>
+	<string>PiercingAR requires photo library access to upload and share photos.</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Poppins-Black.ttf</string>
-		<string>Poppins-Bold.ttf</string>
-		<string>Poppins-ExtraBold.ttf</string>
-		<string>Poppins-Light.ttf</string>
-		<string>Poppins-Medium.ttf</string>
-		<string>Poppins-Regular.ttf</string>
-		<string>Poppins-SemiBold.ttf</string>
 		<string>Inter-Black.ttf</string>
 		<string>Inter-Bold.ttf</string>
 		<string>Inter-ExtraBold.ttf</string>

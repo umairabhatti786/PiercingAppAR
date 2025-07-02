@@ -1,8 +1,8 @@
 import {
   Image,
   ImageBackground,
+  Platform,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -10,7 +10,6 @@ import images from "../../../utils/Constants/images";
 import { theme } from "../../../utils/Themes";
 import sizeHelper from "../../../utils/Helpers";
 import icons from "../../../utils/Constants/icons";
-import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
 
 const LoginScreen = ({ navigation }: any) => {
@@ -24,7 +23,7 @@ const LoginScreen = ({ navigation }: any) => {
         <View
           style={{
             paddingHorizontal: sizeHelper.calWp(30),
-            paddingTop: sizeHelper.calHp(40),
+            paddingTop: sizeHelper.calHp(Platform.OS=="android"? 40:100),
             gap: sizeHelper.calHp(50),
             flex: 1,
           }}
@@ -114,7 +113,6 @@ const styles = StyleSheet.create({
     gap: sizeHelper.calWp(20),
     justifyContent: "center",
     paddingHorizontal: sizeHelper.calWp(35),
-    // width:"70%",
   },
   button_icon: {
     width: sizeHelper.calWp(25),

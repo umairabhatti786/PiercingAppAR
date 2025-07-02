@@ -1,4 +1,4 @@
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/bigdecimal-3.1.9/ext/bigdecimal
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/bigdecimal-3.1.9/ext/bigdecimal
 /Users/mac/.rbenv/versions/2.7.0/bin/ruby -I /Users/mac/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20250425-83307-1plkki1.rb extconf.rb
 checking for __builtin_clz()... yes
 checking for __builtin_clzl()... yes
@@ -27,10 +27,10 @@ checking for rb_category_warn() in ruby.h... no
 checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... no
 creating Makefile
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/bigdecimal-3.1.9/ext/bigdecimal
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/bigdecimal-3.1.9/ext/bigdecimal
 make "DESTDIR=" clean
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/bigdecimal-3.1.9/ext/bigdecimal
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/bigdecimal-3.1.9/ext/bigdecimal
 make "DESTDIR="
 compiling bigdecimal.c
 bigdecimal.c:1268:39: warning: '(' and '{' tokens introducing statement expression appear in different macro expansion contexts [-Wcompound-token-split-by-macro]
@@ -649,6 +649,6 @@ bigdecimal.c:272:48: note: expanded from macro 'DoSomeOne'
 compiling missing.c
 linking shared-object bigdecimal.bundle
 
-current directory: /Users/mac/DorianFruitsAndVeg/vendor/bundle/ruby/2.7.0/gems/bigdecimal-3.1.9/ext/bigdecimal
+current directory: /Users/mac/PiercingAppAR/vendor/bundle/ruby/2.7.0/gems/bigdecimal-3.1.9/ext/bigdecimal
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 bigdecimal.bundle ./.gem.20250425-83307-31cwyu

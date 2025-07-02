@@ -22,6 +22,7 @@ const AboutYouScreen = ({ navigation }: any) => {
             style={{
               gap: sizeHelper.calHp(30),
               flex: 1,
+
             }}
           >
             <CustomHeader disableNext 

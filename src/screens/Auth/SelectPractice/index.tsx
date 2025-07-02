@@ -12,7 +12,12 @@ import { useState } from "react";
 const SelectPracticeScreen = ({ navigation }: any) => {
   const [selectedGender, setSelectedGender] = useState("");
 
-  const gander = ["Default Gauge Size (e.g., 18g, 16g)", "Default Post Length (mm)", "Default Disk Size (mm)", "Add custom presets"];
+  const gander = [
+    "Default Gauge Size (e.g., 18g, 16g)",
+    "Default Post Length (mm)",
+    "Default Disk Size (mm)",
+    "Add custom presets",
+  ];
   return (
     <>
       <ScreenLayout>
@@ -28,8 +33,7 @@ const SelectPracticeScreen = ({ navigation }: any) => {
               flex: 1,
             }}
           >
-            <CustomHeader
-             step={200} />
+            <CustomHeader step={200} />
             <View style={{ gap: sizeHelper.calHp(10) }}>
               <CustomText
                 text={"Set Default Jewelry Sizes"}
@@ -37,7 +41,9 @@ const SelectPracticeScreen = ({ navigation }: any) => {
                 size={22}
               />
               <CustomText
-                text={"Save your most-used sizes to apply faster during simulations."}
+                text={
+                  "Save your most-used sizes to apply faster during simulations."
+                }
                 color={theme.colors.white}
                 size={30}
               />
@@ -80,11 +86,11 @@ const SelectPracticeScreen = ({ navigation }: any) => {
               width: "100%",
             }}
           >
-           <CustomButton
+            <CustomButton
               width={"100%"}
               text="Let’s Get Started"
               justifyContent={"space-between"}
-              onPress={()=>navigation.navigate("PackagesScreen")}
+              onPress={() => navigation.navigate("PackagesScreen")}
               textColor={theme.colors.black}
               bgColor={theme.colors.gray}
               borderRadius={999}
@@ -107,13 +113,4 @@ const SelectPracticeScreen = ({ navigation }: any) => {
 };
 export default SelectPracticeScreen;
 
-const styles = StyleSheet.create({
-  circle: {
-    width: sizeHelper.calWp(330),
-    height: sizeHelper.calWp(330),
-    borderRadius: sizeHelper.calWp(330),
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "red",
-  },
-});
+const styles = StyleSheet.create({});

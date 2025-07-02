@@ -1,8 +1,6 @@
 import { FlatList, Image, StyleSheet, View } from "react-native";
 import sizeHelper from "../../../utils/Helpers";
-import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
-import ScreenLayout from "../../../components/ScreenLayout";
 import TabLayout from "../../../components/TabLayout";
 import TabHeader from "../../../components/TabHeader";
 import images from "../../../utils/Constants/images";
@@ -10,7 +8,6 @@ import { useSelector } from "react-redux";
 import { getScanned } from "../../../redux/reducers/authReducer";
 import { theme } from "../../../utils/Themes";
 import GradientButton from "../../../components/GradientButton";
-import icons from "../../../utils/Constants/icons";
 
 const LibraryScreen = ({ navigation }: any) => {
   const isScanned = useSelector(getScanned);
@@ -37,7 +34,7 @@ const LibraryScreen = ({ navigation }: any) => {
             />
             <GradientButton
               width={"42%"}
-              style={{marginTop:sizeHelper.calHp(30)}}
+              style={{ marginTop: sizeHelper.calHp(30) }}
               onPress={() => navigation.navigate("AddJewelryScan")}
               text={"Scan Now"}
             >
@@ -63,7 +60,6 @@ const LibraryScreen = ({ navigation }: any) => {
             }}
             style={{
               flex: 1,
-              // backgroundColor: theme.colors.background,
             }}
             renderItem={() => {
               return (
@@ -78,7 +74,6 @@ const LibraryScreen = ({ navigation }: any) => {
                   <Image
                     style={{ height: "100%", width: "100%" }}
                     source={images.library_user}
-                    // resizeMode="contain"
                   />
                 </View>
               );
@@ -92,9 +87,5 @@ const LibraryScreen = ({ navigation }: any) => {
 export default LibraryScreen;
 
 const styles = StyleSheet.create({
-  button_icon: {
-    width: sizeHelper.calWp(20),
-    height: sizeHelper.calWp(20),
-    resizeMode: "contain",
-  },
+
 });

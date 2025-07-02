@@ -26,11 +26,14 @@ const ScreenLayout: React.FC<BackgroundContainerProps> = ({
       style={{
         flex: 1,
         backgroundColor: backgroundColor || theme.colors.black,
-        paddingHorizontal: sizeHelper.calWp(30),
         paddingTop: sizeHelper.calHp(40),
       }}
     >
-      <View style={[styles.container, style]}>{children}</View>
+      <View style={[{...styles.container,
+
+paddingHorizontal: sizeHelper.calWp(30),
+
+      }, style]}>{children}</View>
     </SafeAreaView>
   );
 };
@@ -38,7 +41,7 @@ const ScreenLayout: React.FC<BackgroundContainerProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
+    backgroundColor: theme.colors.black,
   },
 });
 

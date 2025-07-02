@@ -6,23 +6,16 @@ import {
   View,
 } from "react-native";
 import sizeHelper from "../../../utils/Helpers";
-import CustomButton from "../../../components/Button";
 import CustomText from "../../../components/Text";
 import TabLayout from "../../../components/TabLayout";
 import TabHeader from "../../../components/TabHeader";
 import images from "../../../utils/Constants/images";
 import { theme } from "../../../utils/Themes";
 import GradientButton from "../../../components/GradientButton";
+import { JewelryData } from "../../../utils/Data";
 
 const JewelryScreen = ({ navigation }: any) => {
-  const JewelryData = [
-    { img: images.Jewelry_img1, name: "STRAIGHT BARBELL" },
-    { img: images.Jewelry_img2, name: "LABRET" },
-    { img: images.Jewelry_img3, name: "CURVED BARBELL" },
-    { img: images.Jewelry_img4, name: "CAPTIVE BEAD RING" },
-    { img: images.Jewelry_img5, name: "CIRCULAR BARBELL" },
-    { img: images.Jewelry_img6, name: "SEAM RING" },
-  ];
+
   return (
     <>
       <TabLayout>

@@ -6,6 +6,7 @@ import {
   View,
   StyleProp,
   ViewStyle,
+  Platform,
 } from "react-native";
 import sizeHelper, { screenWidth, screentHeight } from "../../utils/Helpers";
 import { fonts } from "../../utils/Themes/fonts";
@@ -31,10 +32,11 @@ const MessageSender = ({
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
-          paddingHorizontal: sizeHelper.calWp(30),
-          paddingVertical: sizeHelper.calHp(17),
+          paddingHorizontal: sizeHelper.calWp(Platform.OS=="ios"?60 :30),
+          paddingVertical: sizeHelper.calHp(Platform.OS=="ios"? 30:17),
           alignItems: "center",
           gap:sizeHelper.calWp(20),
+          marginBottom:sizeHelper.calHp(Platform.OS=="ios"? 5:0),
 
           backgroundColor: "#F6F6F6",
         }}
@@ -73,10 +75,10 @@ const MessageSender = ({
               alignItems: "center",
               height: "100%",
               justifyContent: "center",
-              // paddingTop: Pl.OS == "ios" ? "7%" : "0%",
+              paddingTop: Platform.OS == "ios" ? "4%" : "0%",
               paddingVertical: 0, // Adjust as needed for centering
               fontFamily: fonts.Inter_Regular,
-              fontWeight: "600",
+              fontWeight: "500",
               color: theme.colors.secondry,
             }}
             placeholder={"Message..."}

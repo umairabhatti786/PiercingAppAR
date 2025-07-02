@@ -1,6 +1,7 @@
 import {
   Image,
   ImageBackground,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -12,7 +13,6 @@ import sizeHelper from "../../../utils/Helpers";
 import icons from "../../../utils/Constants/icons";
 import CustomButton from "../../../components/Button";
 import { appStyles } from "../../../utils/GlobalStyles";
-import CustomText from "../../../components/Text";
 
 const Welcome = ({ navigation }: any) => {
   return (
@@ -25,7 +25,7 @@ const Welcome = ({ navigation }: any) => {
         <View
           style={{
             paddingHorizontal: sizeHelper.calWp(30),
-            paddingTop: sizeHelper.calHp(40),
+            paddingTop: sizeHelper.calHp(Platform.OS == "android" ? 40 : 100),
             gap: sizeHelper.calHp(50),
             flex: 1,
           }}
@@ -37,7 +37,7 @@ const Welcome = ({ navigation }: any) => {
             }}
           >
             <TouchableOpacity
-            onPress={()=>navigation.navigate("BottomTab")}
+              onPress={() => navigation.navigate("BottomTab")}
               style={{ padding: sizeHelper.calWp(20), alignItems: "flex-end" }}
             >
               <Image
@@ -68,8 +68,7 @@ const Welcome = ({ navigation }: any) => {
             <CustomButton
               text="Create account"
               bgColor={"transparent"}
-                              onPress={()=>navigation.navigate("LoginScreen")}
-
+              onPress={() => navigation.navigate("LoginScreen")}
               borderWidth={1}
               style={{ alignSelf: "center" }}
               borderColor={theme.colors.white}
@@ -82,7 +81,7 @@ const Welcome = ({ navigation }: any) => {
                 text="Sign in"
                 bgColor={"transparent"}
                 borderWidth={1}
-                onPress={()=>navigation.navigate("LoginScreen")}
+                onPress={() => navigation.navigate("LoginScreen")}
                 style={{ alignSelf: "center" }}
                 borderColor={"transparent"}
                 borderRadius={999}
@@ -99,8 +98,6 @@ const Welcome = ({ navigation }: any) => {
             </View>
           </View>
         </View>
-
-      
       </ImageBackground>
     </>
   );
@@ -111,10 +108,5 @@ const styles = StyleSheet.create({
   layout_img: {
     width: "100%",
     height: "100%",
-    // alignItems:"center",
-    // justifyContent:"center"
-    // position: "absolute",
-    // top: verticalScale(-100),
-    // opacity: 0.8,
   },
 });
